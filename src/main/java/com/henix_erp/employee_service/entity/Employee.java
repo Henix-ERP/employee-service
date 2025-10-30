@@ -42,7 +42,4 @@ public class Employee {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "employee_information_id")
     private EmployeeInformation employeeInformation;
-
-    @OneToMany(mappedBy = "employee")
-    private List<EmployeeSkill> skills;
 }

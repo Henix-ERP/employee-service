@@ -1,6 +1,7 @@
 package com.henix_erp.employee_service.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -32,6 +33,7 @@ public class EmployeeSkill {
     @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "employee_id")
+    @JsonIgnoreProperties({"employeeInformation", "supervisor"})
     private Employee employee;
 
     @ManyToOne

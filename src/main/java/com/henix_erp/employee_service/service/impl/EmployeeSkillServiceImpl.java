@@ -9,6 +9,9 @@ import com.henix_erp.employee_service.service.EmployeeSkillService;
 import com.henix_erp.employee_service.service.SkillService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Optional;
+
 @Service
 public class EmployeeSkillServiceImpl implements EmployeeSkillService {
 
@@ -33,5 +36,11 @@ public class EmployeeSkillServiceImpl implements EmployeeSkillService {
         employeeSkill.setEmployee(employee);
         employeeSkill.setSkill(skill);
         return employeeSkillRepository.save(employeeSkill);
+    }
+
+    @Override
+    public List<EmployeeSkill> getEmployeeSkills(int id) {
+        Optional<List<EmployeeSkill>> employeeSkills = employeeSkillRepository.findByEmployeeId(id);
+        return employeeSkills.orElse(null);
     }
 }

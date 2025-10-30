@@ -1,5 +1,6 @@
 package com.henix_erp.employee_service.repository;
 
+import com.henix_erp.employee_service.entity.EmployeeLeaves;
 import com.henix_erp.employee_service.entity.EmployeeSkill;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -9,8 +10,8 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface EmployeeSkillRepository extends JpaRepository<EmployeeSkill, Integer> {
+public interface EmployeeLeavesRepository extends JpaRepository<EmployeeLeaves, Integer> {
 
-    @Query("SELECT es FROM EmployeeSkill es WHERE es.employee.id = :employeeId")
-    Optional<List<EmployeeSkill>> findByEmployeeId(int employeeId);
+    @Query("SELECT el FROM EmployeeLeaves el WHERE el.employee.id = :employeeId")
+    Optional<EmployeeLeaves> findByEmployeeId(int employeeId);
 }

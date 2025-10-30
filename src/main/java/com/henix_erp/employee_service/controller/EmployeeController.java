@@ -1,6 +1,7 @@
 package com.henix_erp.employee_service.controller;
 
 import com.henix_erp.employee_service.entity.Employee;
+import com.henix_erp.employee_service.entity.EmployeeLeaves;
 import com.henix_erp.employee_service.service.EmployeeService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

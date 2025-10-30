@@ -1,5 +1,6 @@
 package com.henix_erp.employee_service.service.impl;
 
+import com.henix_erp.employee_service.entity.EmployeeSkill;
 import com.henix_erp.employee_service.entity.Skill;
 import com.henix_erp.employee_service.repository.SkillRepository;
 import com.henix_erp.employee_service.service.SkillService;

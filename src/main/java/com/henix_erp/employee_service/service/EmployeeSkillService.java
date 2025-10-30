@@ -7,4 +7,6 @@ import java.util.List;
 public interface EmployeeSkillService {
 
     public EmployeeSkill create(EmployeeSkill employeeSkill);
+
+    public List<EmployeeSkill> getEmployeeSkills(int id);
 }

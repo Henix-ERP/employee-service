@@ -1,5 +1,6 @@
 package com.henix_erp.employee_service.service;
 
+import com.henix_erp.employee_service.entity.EmployeeSkill;
 import com.henix_erp.employee_service.entity.Skill;
 
 import java.util.List;
