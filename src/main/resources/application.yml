@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: employee-service
+  config:
+    import: "optional:configserver:http://localhost:8070/"
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
+server:
+  port: 8083
